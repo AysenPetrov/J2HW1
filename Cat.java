@@ -6,28 +6,28 @@ public class Cat implements Competitor {
 
     @Override
     public void run() {
-        System.out.println("Cat runs");
+        System.out.println("Кот бежит");
     }
 
     @Override
     public void jump() {
-        System.out.printf("Cat jumps");
+        System.out.printf("Кот прыгает");
     }
 
     @Override
     public boolean canPass(Obstacle o) {
         boolean canRun = (MAX_LENGTH >= o.getLENGTH());
         if (canRun) {
-            System.out.println("Cat passed the distance!");
+            System.out.println("Кот прошел дистанцию!");
         } else {
-            System.out.println("Cat failed the distance...");
+            System.out.println("Кот провалился на расстояние ...");
             return false;
         }
         boolean canJump = (MAX_HEIGHT >= o.getHEIGHT());
         if (canJump) {
-            System.out.println("Cat climbed the peak!");
+            System.out.println("Кот поднялся на вершину!");
         } else {
-            System.out.println("Cat failed the peak...");
+            System.out.println("Кот провалился на пике ...");
         }
         return canRun && canJump;
     }
