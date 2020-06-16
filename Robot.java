@@ -6,27 +6,27 @@ public class Robot implements Competitor {
 
     @Override
     public void run() {
-        System.out.printf("Robot runs");
+        System.out.printf("Робот бежит");
     }
 
     @Override
     public void jump() {
-        System.out.printf("Robot jumps");
+        System.out.printf("Робот прыгает");
     }
 
     @Override
     public boolean canPass(Obstacle o) {
         boolean canRun = (MAX_LENGTH >= o.getLENGTH());
         if (canRun) {
-            System.out.println("Robot passed the distance!");
+            System.out.println("Робот прошел дистанцию!");
         } else {
-            System.out.println("Robot failed the distance...");
+            System.out.println("Робот провалил дистанцию ...");
         }
         boolean canJump = (MAX_HEIGHT >= o.getHEIGHT());
         if (canJump) {
-            System.out.println("Robot climbed the peak!");
+            System.out.println("Робот поднялся на вершину!");
         } else {
-            System.out.println("Robot failed the peak...");
+            System.out.println("Робот провалился на пике ...");
         }
         return canRun && canJump;
     }
