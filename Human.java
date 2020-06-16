@@ -6,27 +6,27 @@ public class Human implements Competitor {
 
     @Override
     public void run() {
-        System.out.println("Human runs");
+        System.out.println("Человек бежит");
     }
 
     @Override
     public void jump() {
-        System.out.println("Human jumps");
+        System.out.println("Человек прыгает");
     }
 
     @Override
     public boolean canPass(Obstacle o) {
         boolean canRun = (MAX_LENGTH >= o.getLENGTH());
         if (canRun) {
-            System.out.println("Human passed the distance!");
+            System.out.println("Человек прошел расстояние!");
         } else {
-            System.out.println("Human failed the distance...");
+            System.out.println("Человек провалил расстояние ...");
         }
         boolean canJump = (MAX_HEIGHT >= o.getHEIGHT());
         if (canJump) {
-            System.out.println("Human climbed the peak!");
+            System.out.println("Человек поднялся на вершину!");
         } else {
-            System.out.println("Human failed the peak...");
+            System.out.println("Человек провалился на пике ...");
         }
         return canRun && canJump;
     }
